@@ -29,6 +29,10 @@ class DataIngestion:
             logger.error(f"HTTPError: {e.code} - {e.reason}")
             # Handle specific HTTPError cases if needed
 
+        except PermissionError:
+            logger.error(f"PermissionError: File already exists and cannot be overwritten.")
+            # Handle PermissionError if needed
+
         except Exception as e:
             logger.error(f"An error occurred: {e}")
             # Handle other exceptions if needed
