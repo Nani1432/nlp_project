@@ -30,7 +30,7 @@ class DataTransformation:
             dataset_samsum = load_from_disk(self.config.data_path)
 
             # Specify a different output directory
-            output_dir = os.path.join(self.config.root_dir, "transformed_samsum_dataset")
+            output_dir = os.path.join(self.config.root_dir, "samsum_dataset")
             
             # Check if the output directory already exists
             if not os.path.exists(output_dir):
